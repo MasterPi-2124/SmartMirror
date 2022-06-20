@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
         {
             break;
         }
-        sprintf(file_path, "/home/ngoquang/Desktop/workplaces/Learn_CV/demo/hello%d.png", i);
+        sprintf(file_path, "/home/masterpi/Documents/SmartMirror/getFrames/hello%d.png", i);
         fd[i] = open(file_path, O_CREAT|O_WRONLY|O_APPEND, S_IRUSR|S_IWUSR);
         printf("file %d\n", i);
         read(sockfd, buff, 2*sizeof(int));

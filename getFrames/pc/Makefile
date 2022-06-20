@@ -11,4 +11,4 @@ client : client.c
 clean:
 	rm -rf $(PROJECT)
 	rm -rf hello.png client
-	rm -rf /home/ngoquang/Desktop/workplaces/Learn_CV/demo/hello.png
+	rm -rf /home/masterpi/Documents/SmartMirror/getFrames/hello.png
