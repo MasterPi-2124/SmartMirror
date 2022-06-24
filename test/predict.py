@@ -149,8 +149,8 @@ def frame_extraction(video_path):
             frames_list.append(image)
     frames_list = np.asarray(frames_list)
     return frames_list
-output_folder = r"D:/Hoctap/20211/datn/code_datn/res"
-vid_link = r"D:/Hoctap/20211/datn/code_datn/res"
+output_folder = r"/home/hghgjg/SmartMirror/test/res"
+vid_link = r"/home/hghgjg/SmartMirror/test/res"
 
 
 model = build_model()
