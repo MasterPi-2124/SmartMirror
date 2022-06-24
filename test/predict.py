@@ -1,3 +1,5 @@
+from time import perf_counter
+import time
 from tensorflow.keras.models import Sequential, Model 
 from tensorflow.keras.layers import *
 import os
@@ -17,6 +19,9 @@ from tensorflow.keras.models import load_model
 import imutils
 import tensorflow as tf
 from datetime import datetime
+
+
+
 data_dir = "datn_data/"
 img_size = (224, 224)
 seq_len = 16
@@ -146,9 +151,12 @@ def frame_extraction(video_path):
     return frames_list
 output_folder = r"D:/Hoctap/20211/datn/code_datn/res"
 vid_link = r"D:/Hoctap/20211/datn/code_datn/res"
+
+
+model = build_model()
 def predict(model_link=None, output_folder=output_folder):
     classes = ["baby_shark", "bravo", "scissor", "stop", "typing", "no_gesture"]
-    model = build_model()
+    
     # model.compile(loss='categorical_crossentropy', optimizer=Adam(0.0001), metrics=["accuracy"])
     #model.load_weights('model_test.h5')
     # model = load_model(model_link)
@@ -163,4 +171,10 @@ def predict(model_link=None, output_folder=output_folder):
     print(y.shape)
     print(classes[np.argmax(y[0])])
     return
-predict(output_folder=vid_link)
+
+while True:
+    t1_start = perf_counter()
+    predict(output_folder=vid_link)
+    t1_stop = perf_counter()
+    print("Elapsed time during the whole program in seconds:",t1_stop-t1_start)
+    time.sleep(5)

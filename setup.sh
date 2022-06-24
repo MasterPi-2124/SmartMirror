@@ -1,5 +1,5 @@
 #!/bin/bash
-
+FILE="$(pwd)/setup.sh"
 # Make system new and shiny
 cd ~
 sudo apt update && sudo apt upgrade
@@ -19,7 +19,7 @@ cd MagicMirror
 npm install --only=prod --omit=dev
 
 # Add default config file
-cp config/config.js.sample  config/config.js
+wget -O config/config.js https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/config/config.js
 
 # Install Google Assistant
 cd modules
@@ -33,4 +33,6 @@ cd ../EXT-Alert && npm install
 cd ../MMM-GoogleAssistant && npm install
 
 
-# Config Google Assistant
+
+# Run only time hahaha
+rm $FILE
