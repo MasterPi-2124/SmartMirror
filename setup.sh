@@ -5,13 +5,13 @@ cd ~
 sudo apt update && sudo apt upgrade
 
 # Check if NodeJS is installed
-if [! which node > /dev/null ]; then
-	echo -e "NodeJS is not installed. Installing NodeJS v16.14.2"
-	curl -sl https://deb.nodesource.com/setup_16.x | sudo -E bash
-	sudo apt install -y nodejs gcc g++ make
-	npm install -g pm2
-	echo -e "NodeJS is installed!"
-fi
+#if [! which node > /dev/null ]; then
+#	echo -e "NodeJS is not installed. Installing NodeJS v16.14.2"
+#	curl -sl https://deb.nodesource.com/setup_16.x | sudo -E bash
+#	sudo apt install -y nodejs gcc g++ make
+#	npm install -g pm2
+#	echo -e "NodeJS is installed!"
+#fi
 
 # Clone and build MagicMirror
 git clone https://github.com/MichMich/MagicMirror
