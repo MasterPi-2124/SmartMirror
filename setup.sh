@@ -32,4 +32,5 @@ cd ../Gateway && npm install
 cd ../EXT-Alert && npm install
 cd ../MMM-GoogleAssistant && npm install
 
+
 # Config Google Assistant

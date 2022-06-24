@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/masterpi/Documents/SmartMirror'
+make: Leaving directory '/home/masterpi/Documents/SmartMirror'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
