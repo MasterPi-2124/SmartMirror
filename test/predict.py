@@ -177,4 +177,4 @@ while True:
     predict(output_folder=vid_link)
     t1_stop = perf_counter()
     print("Elapsed time during the whole program in seconds:",t1_stop-t1_start)
-    time.sleep(5)
+    time.sleep(20)
