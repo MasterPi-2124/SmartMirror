@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ngoquang/Desktop/workplaces/Learn_CV/cam_capture/raspi_client'
+"gcc" -c v4l2lib.c v4l2lib.h
+"gcc" -c client.c client.h
+"gcc" raspi_cam_client.c client.o v4l2lib.o -o raspi_cam_client 
+make: Leaving directory '/home/ngoquang/Desktop/workplaces/Learn_CV/cam_capture/raspi_client'
+ 

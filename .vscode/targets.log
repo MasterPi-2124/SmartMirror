@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 24 15:41:52 2022
+# Make data base, printed on Sat Jul  2 15:18:59 2022
 
 # Variables
 
@@ -41,7 +43,7 @@ CURDIR := /home/masterpi/Documents/SmartMirror
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code-insiders/1034
+SNAP_DATA = /var/snap/code-insiders/1040
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{},"_languagePackSupport":true}
 # environment
@@ -81,7 +83,7 @@ VSCODE_CWD = /home/masterpi
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code-insiders/1034/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code-insiders/1040/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -93,15 +95,15 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = WhiteSur-cursors
 # environment
-SESSION_MANAGER = local/masterpi:@/tmp/.ICE-unix/2226,unix/masterpi:/tmp/.ICE-unix/2226
+SESSION_MANAGER = local/masterpi:@/tmp/.ICE-unix/2369,unix/masterpi:/tmp/.ICE-unix/2369
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/masterpi/snap/code-insiders/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code-insiders/1034
+SNAP = /snap/code-insiders/1040
 # environment
-SNAP_VERSION = d6497d3d
+SNAP_VERSION = 0b3574dc
 # environment
 DISABLE_WAYLAND = 1
 # environment
@@ -109,13 +111,13 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/masterpi/.gtkrc-2.0:/home/masterpi/.config/gtkrc-2.0
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code-insiders/1034/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code-insiders/1040/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-SfGed7L5Vayx/agent.1959
+SSH_AUTH_SOCK = /tmp/ssh-fkSJUSf7dds2/agent.1826
 # automatic
 %F = $(notdir $%)
 # environment
@@ -133,7 +135,7 @@ KDE_SESSION_VERSION = 5
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 2023
+SSH_AGENT_PID = 1887
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
@@ -143,7 +145,7 @@ HOME = /home/masterpi
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/masterpi/.config/Code - Insiders/CachedData/d6497d3db17303db96044f5453141aa20bb3df6d
+VSCODE_CODE_CACHE_PATH = /home/masterpi/.config/Code - Insiders/CachedData/0b3574dcef8f35fec4ee4f83dc958c1f16ef6fce
 # environment
 LOGNAME = masterpi
 # environment
@@ -179,7 +181,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/masterpi/snap/code-insiders/1034
+SNAP_USER_DATA = /home/masterpi/snap/code-insiders/1040
 # environment
 SHLVL = 0
 # environment
@@ -187,7 +189,7 @@ XDG_SESSION_ID = 1
 # environment
 USER = masterpi
 # environment
-SNAP_REVISION = 1034
+SNAP_REVISION = 1040
 # environment
 LC_MONETARY = en_US.UTF-8
 # makefile
@@ -224,8 +226,6 @@ MFLAGS = -pqrR
 GDK_BACKEND = x11
 # environment
 LC_PAPER = en_US.UTF-8
-# environment
-NO_AT_BRIDGE = 1
 # environment
 QT_ACCESSIBILITY = 1
 # environment
@@ -265,11 +265,11 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 5394
+VSCODE_PID = 6116
 # environment
 KDE_SESSION_UID = 1000
 # variable set hash-table stats:
-# Load=129/1024=13%, Rehash=0, Collisions=15/151=10%
+# Load=128/1024=12%, Rehash=0, Collisions=15/150=10%
 
 # Pattern-specific Variable Values
 
@@ -277,9 +277,9 @@ KDE_SESSION_UID = 1000
 
 # Directories
 
-# . (device 2050, inode 658086): 8 files, no impossibilities.
+# . (device 2050, inode 658086): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -288,9 +288,6 @@ KDE_SESSION_UID = 1000
 # Files
 
 # Not a target:
- 
-make: *** No rule to make target 'all'.  Stop.
-
 all:
 #  Command line target.
 #  Implicit rule search has been done.
@@ -332,12 +329,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 139 B / avg = 8 B
-# current buf: size = 8162 B / used = 139 B / count = 16 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 144 B / avg = 8 B
+# current buf: size = 8162 B / used = 144 B / count = 17 / avg = 8 B
 
-# strcache performance: lookups = 19 / hit rate = 15%
+# strcache performance: lookups = 20 / hit rate = 15%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Fri Jun 24 15:41:52 2022
+# Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
+# Finished Make data base on Sat Jul  2 15:18:59 2022
 
  
