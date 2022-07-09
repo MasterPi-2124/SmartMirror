@@ -18,11 +18,18 @@
 
 #include "fetch_img.h"
 
-uint8_t *img_buff;
+// uint8_t *img_buff;
 int     camFd;
 
 #define TIMEOUT        (5)
 
+
+struct buffer {
+    uint8_t *start;
+    size_t length;
+};
+
+struct buffer  img_buff;
 
 static int xioctl(int fd, int request, void *arg)
 {
@@ -152,12 +159,11 @@ int init_mmap(int fd)
         perror("Querying Buffer");
         return 1;
     }
- 
-    img_buff = (uint8_t*)mmap (NULL, buf.length, PROT_READ | PROT_WRITE, MAP_SHARED, fd, buf.m.offset);
-    //S_BUFFER_LEN = buf.length;
-    printf("Length: %d\nAddress: %p\n", buf.length, img_buff);
+    
+    img_buff.start = (uint8_t *)mmap (NULL, buf.length, PROT_READ | PROT_WRITE, MAP_SHARED, fd, buf.m.offset);
+    img_buff.length = buf.length;
+    printf("Length: %d\nAddress: %p\n", buf.length, img_buff.start);
     printf("Image Length: %d\n", buf.bytesused);
- 
     return 0;
 }
  
@@ -207,21 +213,29 @@ int capture_image(int fd)
 void handle_func()
 {
     char* output_file_path = (char*)calloc(200, 1);
-    int i = 0;
+    int i = 0, n = 0;
     int fd, bytesused;
 
     for (i = 1; i <= MAX_IMG_NUM; i++) {
         sprintf(output_file_path, "%s/hello%d.png", IMGS_FOLDER,i);
+        printf("file: %s\n", output_file_path);
         fd = open(output_file_path, O_CREAT | O_WRONLY, 0666);
-        if(fd == -1) break;
+        if(fd == -1)
+        {
+            perror("open()");
+            break;
+        }
         bytesused = capture_image(camFd);
-        write(fd, img_buff, bytesused);
+        n = write(fd, img_buff.start, bytesused);
+        printf("write returned %d: %s\n", n, strerror(errno));
+
         usleep(400000);
         close(fd);
     }
     
     free(output_file_path);
 }
+
 
 
 /**
@@ -258,6 +272,23 @@ void export_gpio(int gpio_num, char direction)
     free(buf_cmd);
 }
 
+static void uninit_device(void)
+{
+    if(-1 == munmap(img_buff.start, img_buff.length))
+    {
+        perror("mummap()");
+    }
+}
+
+static void stop_capturing(void)
+{
+    enum v4l2_buf_type type;
+    type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    if(-1 == xioctl(camFd, VIDIOC_STREAMOFF, &type))
+    {
+        perror("VIDIOC_STREAMOFF");
+    }
+}
 
 void pir_thread_func(void)
 {
@@ -319,8 +350,8 @@ int main(int argc, char* argv[])
 
     // pir_thread_func();
     handle_func();
-
-    free(img_buff);
+    stop_capturing();
+    uninit_device();
     close(camFd);
     return 0;
 }

@@ -3,6 +3,6 @@
 
 #define PIR_PIN				(17)
 #define PIR_STATUS_FILE     ("/sys/class/gpio/gpio17/value")
-#define IMGS_FOLDER         ("/tmp/imgs")
+#define IMGS_FOLDER         ("/home/ngoquang/imgs")
 #define MAX_IMG_NUM         (16)
 #endif
