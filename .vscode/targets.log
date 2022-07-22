@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul  2 15:18:59 2022
+# Make data base, printed on Fri Jul 22 15:35:10 2022
 
 # Variables
 
@@ -43,7 +43,7 @@ CURDIR := /home/masterpi/Documents/SmartMirror
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code-insiders/1040
+SNAP_DATA = /var/snap/code-insiders/1048
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{},"_languagePackSupport":true}
 # environment
@@ -83,7 +83,7 @@ VSCODE_CWD = /home/masterpi
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code-insiders/1040/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code-insiders/1048/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -95,15 +95,15 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = WhiteSur-cursors
 # environment
-SESSION_MANAGER = local/masterpi:@/tmp/.ICE-unix/2369,unix/masterpi:/tmp/.ICE-unix/2369
+SESSION_MANAGER = local/masterpi:@/tmp/.ICE-unix/2362,unix/masterpi:/tmp/.ICE-unix/2362
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/masterpi/snap/code-insiders/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code-insiders/1040
+SNAP = /snap/code-insiders/1048
 # environment
-SNAP_VERSION = 0b3574dc
+SNAP_VERSION = f3528d48
 # environment
 DISABLE_WAYLAND = 1
 # environment
@@ -111,13 +111,13 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/masterpi/.gtkrc-2.0:/home/masterpi/.config/gtkrc-2.0
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code-insiders/1040/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code-insiders/1048/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-fkSJUSf7dds2/agent.1826
+SSH_AUTH_SOCK = /tmp/ssh-4jmon2QrTyYL/agent.1832
 # automatic
 %F = $(notdir $%)
 # environment
@@ -135,7 +135,7 @@ KDE_SESSION_VERSION = 5
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1887
+SSH_AGENT_PID = 1954
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
@@ -145,7 +145,7 @@ HOME = /home/masterpi
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/masterpi/.config/Code - Insiders/CachedData/0b3574dcef8f35fec4ee4f83dc958c1f16ef6fce
+VSCODE_CODE_CACHE_PATH = /home/masterpi/.config/Code - Insiders/CachedData/f3528d481b366b24321c382d5e5849f4c7d65248
 # environment
 LOGNAME = masterpi
 # environment
@@ -181,7 +181,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/masterpi/snap/code-insiders/1040
+SNAP_USER_DATA = /home/masterpi/snap/code-insiders/1048
 # environment
 SHLVL = 0
 # environment
@@ -189,7 +189,7 @@ XDG_SESSION_ID = 1
 # environment
 USER = masterpi
 # environment
-SNAP_REVISION = 1040
+SNAP_REVISION = 1048
 # environment
 LC_MONETARY = en_US.UTF-8
 # makefile
@@ -211,7 +211,7 @@ KDE_APPLICATIONS_AS_SCOPE = 1
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-02e2e001-1.69.0-insider-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-02e2e001-1.70.0-insider-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code-insiders_code-insiders.desktop
 # makefile
@@ -265,7 +265,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 6116
+VSCODE_PID = 6101
 # environment
 KDE_SESSION_UID = 1000
 # variable set hash-table stats:
@@ -277,9 +277,9 @@ KDE_SESSION_UID = 1000
 
 # Directories
 
-# . (device 2050, inode 658086): 9 files, no impossibilities.
+# . (device 2050, inode 658086): 8 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -305,6 +305,7 @@ Makefile:
 makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
+ 
 #  File has been updated.
 #  Failed to be updated.
 
@@ -329,12 +330,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 144 B / avg = 8 B
-# current buf: size = 8162 B / used = 144 B / count = 17 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 159 B / avg = 9 B
+# current buf: size = 8162 B / used = 159 B / count = 16 / avg = 9 B
 
-# strcache performance: lookups = 20 / hit rate = 15%
+# strcache performance: lookups = 19 / hit rate = 15%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Sat Jul  2 15:18:59 2022
+# Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
+# Finished Make data base on Fri Jul 22 15:35:10 2022
 
  
