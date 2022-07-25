@@ -10,7 +10,7 @@ cd MagicMirror
 npm install --only=prod --omit=dev
 
 # Add default config file
-wget -O config/config.js https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/config/config.js
+wget -O config/config.js https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/config.js
 
 # Install Google Assistant
 cd modules
@@ -21,9 +21,5 @@ git clone https://github.com/bugsounet/EXT-Alert
 cd EXT-Detector && npm install
 cd ../Gateway && npm install
 cd ../EXT-Alert && npm install
-cd ../MMM-GoogleAssistant && npm install
+cd ../MMM-GoogleAssistant && wget https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/credentials.json && npm install
 
-
-
-# Run only time hahaha
-rm $FILE
