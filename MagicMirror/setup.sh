@@ -77,4 +77,4 @@ cd ../MMM-GoogleAssistant && wget https://raw.githubusercontent.com/MasterPi-212
 
 printf "${GREEN} Getting token for Google Assistant module..."
 npm run token
-printf "${GREEN} MagicMirror is installed successfully! You can run it via `npm run start` command. \n${NC}"
+printf "${GREEN} MagicMirror is installed successfully! You can run it via \"npm run start\" command. \n${NC}"
