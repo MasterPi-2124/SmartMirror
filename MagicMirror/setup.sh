@@ -23,14 +23,14 @@ else
     exit 1
 fi
 
-if ! [ -x "$(command -v node)" ]; then
+if [ -x "$(command -v node)" ]; then
     printf "${GREEN} NodeJS is installed! Found version $node_version.\n${NC}"
 else
     printf "${RED} NodeJS is not installed! You must install NodeJS and npm to make it work.\n${NC}"
     exit 1
 fi
 
-if ! [ -x "$(command -v npm)" ]; then
+if [ -x "$(command -v npm)" ]; then
     printf "${GREEN} npm is installed! Found version $npm_version.\n${NC}"
 else
     printf "${RED} npm is not installed! You must install NodeJS and npm to make it work.\n${NC}"
