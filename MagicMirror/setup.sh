@@ -75,4 +75,6 @@ cd ../Gateway && npm install
 cd ../EXT-Alert && npm install
 cd ../MMM-GoogleAssistant && wget https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/credentials.json && npm install
 
+printf "${GREEN} Getting token for Google Assistant module..."
+npm run token
 printf "${GREEN} MagicMirror is installed successfully! You can run it via `npm run start` command. ${NC}"
