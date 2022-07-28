@@ -13,6 +13,8 @@ import pandas as pd
 import random
 import time
 from datetime import datetime
+
+
 def build_model():
     img_size = (224, 224)
     base_model = MobileNetV2(weights=None, include_top=False, input_shape=img_size+(3,), alpha=0.75)
@@ -25,10 +27,13 @@ def build_model():
     return model
     #model.summary()
 
-img_path = 'D:/Hoctap/20211/datn/code_datn/res/result.png'
-model_link = 'D:/Hoctap/20211/datn/code_datn/result.h5'
+working_directory = os.getcwd()
+print(working_directory)
+img_path = '{}/res/result.png'.format(working_directory)
+model_link = '{}/result.h5'.format(working_directory)
 model = build_model()
 model.load_weights(model_link)
+
 def predict():
     img_size = (224, 224)
     classes = ['1','L','nogesture','paper','rock','scissor','u']
@@ -45,6 +50,7 @@ def predict():
     y = model.predict(img)
     print(classes[np.argmax(y[0])])
     return
+
 while True:
     predict()
     time.sleep(5)
