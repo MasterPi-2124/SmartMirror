@@ -17,6 +17,8 @@ while True:
         cv2.imshow('frame', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+    filename = "save.png"
+    cv2.imwrite(filename, frame)
     cv2.destroyAllWindows()
     pir.wait_for_no_motion()
 
