@@ -19,4 +19,5 @@ while True:
             break
     cv2.destroyAllWindows()
     pir.wait_for_no_motion()
-    vid.release()
+
+vid.release()
