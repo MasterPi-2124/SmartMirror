@@ -60,8 +60,8 @@ if __name__ == "__main__":
     vid = cv2.VideoCapture(0)
     print("File started!!!")
     while True:
-        t1_start = perf_counter()
         pir.wait_for_motion()
+        t1_start = perf_counter()
         print("Motion detected! Sleep 3s before captured")
         sleep(3)
         ret, frame = vid.read()
