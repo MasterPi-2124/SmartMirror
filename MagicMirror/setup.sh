@@ -7,6 +7,7 @@ Blue='\033[0;34m'
 PURPLE='\033[0;35m'
 YELLOW='\033[1;33m'
 ORANGE='\033[0;33m'
+BOLD = '\033[1m'
 
 # Make system new and shiny
 printf "${GREEN} Checking requirements ...\n${NC}"

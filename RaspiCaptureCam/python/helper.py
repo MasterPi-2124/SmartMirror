@@ -1,22 +1,27 @@
-from gpiozero import MotionSensor
-import cv2
-from pip import main
+import RPi.GPIO as GPIO
+import time
 
-def capture():
-    vid = cv2.VideoCapture(0)
+pir_sensor = 11
+piezo = 7
+
+GPIO.setmode(GPIO.BOARD)
+
+GPIO.setup(piezo,GPIO.OUT)
+
+GPIO.setup(pir_sensor, GPIO.IN)
+
+current_state = 0
+try:
     while True:
-        ret, frame = vid.read()
-        break
-
-    vid.release()
-
-if __name__ == "__main__":
-
-    pir = MotionSensor(4)
-
-
-    while True:
-        pir.wait_for_active()
-        print("detect")
-        capture()
-        pir.wait_for_inactive()
+        time.sleep(0.1)
+        current_state = GPIO.input(pir_sensor)
+        if current_state == 1:
+            print("GPIO pin %s is %s" % (pir_sensor, current_state))
+            GPIO.output(piezo,True)
+            time.sleep(1)
+            GPIO.output(piezo,False)
+            time.sleep(5)
+except KeyboardInterrupt:
+    pass
+finally:
+    GPIO.cleanup()
