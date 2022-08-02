@@ -5,7 +5,7 @@ import cv2
 from gpiozero import MotionSensor
 
 # pir pin = 17
-pir = MotionSensor(17)
+pir = MotionSensor(27)
 # define a video capture object
 vid = cv2.VideoCapture(0)
 
