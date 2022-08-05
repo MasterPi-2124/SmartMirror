@@ -49,6 +49,13 @@ let config = {
   			}
 		},
 		{
+			module: 'MMM-OpenCVGestures',
+			position: "upper_third",
+			config: {
+				GPIO: 14,
+			}
+		},
+		{
 			module: "MMM-GoogleAssistant",
   			configDeepMerge: true,
   			config: {
