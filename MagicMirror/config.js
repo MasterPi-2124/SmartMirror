@@ -62,8 +62,8 @@ let config = {
 	    			debug: true,
     				stopCommand: "stop",
     				assistantConfig: {
-					latitude: 51.508530,
-					longitude: -0.076132,
+					latitude: 21.0278,
+					longitude: 105.8342,
 				},
     				responseConfig: {
       					chimes: {},
@@ -132,6 +132,10 @@ let config = {
 				locationID: "1581129", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				apiKey: "0433e83198f9d86c7a9d306281606514"
 			}
+		},
+		{
+			module: "compliments",
+			position: "lower_third"
 		},
 		{
 			module: "weather",
