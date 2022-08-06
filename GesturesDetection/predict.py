@@ -7,16 +7,9 @@ from tensorflow.keras.layers import *
 from tensorflow.keras.losses import CategoricalCrossentropy
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.models import load_model
-import tensorflow as tf
-import seaborn as sn
-import pandas as pd
-import random
 from time import sleep
-import cv2
-import os
 from time import perf_counter
 from gpiozero import MotionSensor
-from datetime import datetime
 
 
 def build_model():
@@ -41,10 +34,6 @@ model.load_weights(model_link)
 def predict():
     img_size = (224, 224)
     classes = ['1','L','nogesture','paper','rock','scissor','u']
-    #model = load_model(model_link)
-    # for i, w in enumerate(model.weights):
-      # print(i, w.name)
-    # model.save_weights('my_weights.h5')
     img =  cv2.imread(img_path)
     img = cv2.resize(img, img_size)
     img = img/255.0
