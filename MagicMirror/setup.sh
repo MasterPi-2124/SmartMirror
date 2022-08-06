@@ -15,9 +15,6 @@ NPM_TESTED="V7.11.2"
 printf "${YELLOW}Checking requirements ...\n${NC}"
 
 raspi=$(raspi-config nonint get_pi_type)
-node_installed=$(which node)
-node_version=$($node_installed -v)
-npm_version='V'$(npm -v)
 arm=$(uname -m)
 
 function verlte() {  [ "$1" = "`echo -e "$1\n$2" | sort -V | head -n1`" ];}
@@ -33,26 +30,28 @@ if [ 0 == 1 ]; then
 fi
 
 if [ -x "$(command -v node)" ]; then
-    if [ ${node_version:1:2} -gt ${NODE_TESTED:1:2} ]; then
-        printf "${GREEN}NodeJS is installed! Found version $node_version.\n${NC}"
-    else
+    node_version=$(node -v)
+    if verlt $node_version $NODE_TESTED; then
         printf "${RED}NodeJS version is too old! MagicMirror only run on NodeJS >= $NODE_TESTED.\n${NC}"
         exit 1
+    else
+        printf "${GREEN}NodeJS is installed! Found version $node_version.\n${NC}"
     fi
 else
-    printf "${RED}NodeJS is not installed! You must install NodeJS and NPK to make it work.\n${NC}"
+    printf "${RED}NodeJS is not installed! You must install NodeJS and NPM to make it work.\n${NC}"
     exit 1
 fi
 
 if [ -x "$(command -v npm)" ]; then
-    if verlte $NPM_TESTED $npm_version; then
-        printf "${GREEN}NPM is installed! Found version $npm_version.\n${NC}"
-    else
+    npm_version='V'$(npm -v)
+    if verlte $npm_version $NPM_TESTED; then
         printf "${RED}NPM version is too old! MagicMirror only run on NPM >= $NPM_TESTED.\n${NC}"
         exit 1
+    else
+        printf "${GREEN}NPM is installed! Found version $npm_version.\n${NC}"
     fi
 else
-    printf "${RED}NPM is not installed! You must install NodeJS and NPK to make it work.\n${NC}"
+    printf "${RED}NPM is not installed! You must install NodeJS and NPM to make it work.\n${NC}"
     exit 1
 fi
 
