@@ -71,6 +71,9 @@ git clone https://github.com/bugsounet/Gateway
 printf "${GREEN} Cloning EXT-Alert... \n${NC}"
 git clone https://github.com/bugsounet/EXT-Alert
 
+printf "${GREEN} Cloning MMM-OpenCVGestures... \n${NC}"
+git clone https://github.com/MasterPi-2124/MMM-OpenCVGestures
+
 cd EXT-Detector && npm install
 cd ../Gateway && npm install
 cd ../EXT-Alert && npm install
