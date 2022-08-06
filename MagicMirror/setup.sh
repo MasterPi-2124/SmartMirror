@@ -77,7 +77,8 @@ git clone https://github.com/MasterPi-2124/MMM-OpenCVGestures
 cd EXT-Detector && npm install
 cd ../Gateway && npm install
 cd ../EXT-Alert && npm install
-cd ../MMM-GoogleAssistant && wget https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/credentials.json && npm install
+cd ../MMM-GoogleAssistant 
+wget https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/credentials.json && npm install
 
 printf "${GREEN} Getting token for Google Assistant module..."
 npm run token
