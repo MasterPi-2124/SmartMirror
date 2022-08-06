@@ -80,7 +80,7 @@ fi
 printf "${YELLOW}Getting default config... \n${NC}"
 # Add default config file
 wget -O config/config.js https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/config.js
-
+printf "${GREEN}Configuration saved successfully at config/config.js.\n${NC}"
 
 # Install Google Assistant
 cd modules
@@ -99,6 +99,9 @@ git clone https://github.com/bugsounet/EXT-Alert
 printf "${YELLOW}Cloning MMM-OpenCVGestures... \n${NC}"
 git clone https://github.com/MasterPi-2124/MMM-OpenCVGestures
 
+printf "${GREEN}Modules cloned successfully!\n${NC}"
+
+printf "${YELLOW}Installing EXT-Detector... \n${NC}"
 cd EXT-Detector && npm install
 install_status=$?
 if [ $install_status -eq 0 ]; then
@@ -108,6 +111,7 @@ else
     exit 1
 fi
 
+printf "${YELLOW}Installing Gateway... \n${NC}"
 cd ../Gateway && npm install
 install_status=$?
 if [ $install_status -eq 0 ]; then
@@ -117,6 +121,7 @@ else
     exit 1
 fi
 
+printf "${YELLOW}Installing EXT-Alert... \n${NC}"
 cd ../EXT-Alert && npm install
 install_status=$?
 if [ $install_status -eq 0 ]; then
@@ -126,9 +131,11 @@ else
     exit 1
 fi
 
+printf "${YELLOW}Installing MMM-GoogleAssistant... \n${NC}"
 cd ../MMM-GoogleAssistant
 printf "${YELLOW}Installing credentials... \n${NC}"
 wget https://raw.githubusercontent.com/MasterPi-2124/SmartMirror/master/MagicMirror/credentials.json
+printf "${GREEN}Credentials saved successfully!\n${NC}"
 npm install
 install_status=$?
 if [ $install_status -eq 0 ]; then
