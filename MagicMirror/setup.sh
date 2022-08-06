@@ -147,4 +147,6 @@ fi
 
 printf "${YELLOW}Getting token for Google Assistant module..."
 npm run token
+
+rmessage="npm run start"
 printf "\e[92mWe're ready! Run \e[1m\e[97m$rmessage\e[0m\e[92m from the ~/MagicMirror directory to start your MagicMirror.\e[0m"
