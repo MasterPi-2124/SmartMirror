@@ -1,8 +1,0 @@
-tensorflow
-keras
-numpy
-opencv-python
-regex
-imutils
-os? cái này a cũng k rõ, hình như là package mặc định
-datetime
