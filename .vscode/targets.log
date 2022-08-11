@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Sat Aug  6 15:25:33 2022
+# Make data base, printed on Thu Aug 11 18:59:11 2022
 
 # Variables
 
@@ -45,7 +42,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.yU7wih7Vu3/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.kW2bPZbCpZ/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -59,7 +56,7 @@ HOME = /Users/masterpi
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/masterpi/Library/Application Support/Code - Insiders/CachedData/73fd3f11032e7b83c2ae011b5516e6ddd19e3db2
+VSCODE_CODE_CACHE_PATH = /Users/masterpi/Library/Application Support/Code - Insiders/CachedData/b0895f9fcc5b49587a2b187a92bbe6d7efae35fa
 # environment
 LOGNAME = masterpi
 # environment
@@ -129,7 +126,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 608
+VSCODE_PID = 1587
 # variable set hash-table stats:
 # Load=58/1024=6%, Rehash=0, Collisions=1/79=1%
 
@@ -139,7 +136,7 @@ VSCODE_PID = 608
 
 # Directories
 
-# . (device 16777229, inode 17787755): 11 files, no impossibilities.
+# . (device 16777234, inode 17787755): 11 files, no impossibilities.
 
 # 11 files, no impossibilities in 1 directories.
 
@@ -213,6 +210,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat Aug  6 15:25:33 2022
+# Finished Make data base on Thu Aug 11 18:59:11 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+

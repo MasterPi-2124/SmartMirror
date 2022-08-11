@@ -58,7 +58,7 @@ fi
 printf "${YELLOW}Going to home directory...\n${NC}"
 printf "${YELLOW}Updating the system...\n${NC}"
 cd ~
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 
 printf "${GREEN}System updated!\n${NC}"
 
