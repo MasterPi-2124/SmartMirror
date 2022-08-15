@@ -67,7 +67,7 @@ if __name__ == "__main__":
     while x <= 500:
             vid = cv2.VideoCapture(0)
             ret, frame = vid.read()
-            # cv2.imwrite('raw/savedImage_{}.png'.format(x), frame)
+            cv2.imwrite('raw/savedImage_{}.png'.format(x), frame)
             vid.release()
             segment(model_segment, frame, x)
             x = x + 1
