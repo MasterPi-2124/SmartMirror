@@ -17,7 +17,7 @@ def my_IoU(y_true, y_pred):
 
 model_segment = load_model('seg_model.h5', custom_objects={'my_IoU': my_IoU})
 
-def segment(model_segment,img_input, x):
+def segment(model_segment,img_input, index):
     img = img_input
     img_input.astype('float32')
     img_input = cv2.resize(img_input, (256, 256))
@@ -59,7 +59,7 @@ def segment(model_segment,img_input, x):
                                                                                                       0.1 * (x2_final - x1_final)))]
     result = cv2.resize(result, (256, 256))
 
-    cv2.imwrite('segment/nogestures/segment_{}.png'.format(x), result)
+    cv2.imwrite('segment/nogestures/segment_{}.png'.format(index), result)
 
 
 if __name__ == "__main__":
@@ -71,3 +71,4 @@ if __name__ == "__main__":
             vid.release()
             segment(model_segment, frame, x)
             x = x + 1
+            print(x)
