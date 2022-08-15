@@ -102,7 +102,7 @@ def predict():
     segment(model_segment, img_path)
     img_size = (224, 224)
     classes = ['paper','like','nogesture']
-    img =  cv2.imread(img_path)
+    img =  cv2.imread(img_seg)
     img = cv2.resize(img, img_size)
     img = img/255.0
     img = img.reshape(1,224,224,3)
