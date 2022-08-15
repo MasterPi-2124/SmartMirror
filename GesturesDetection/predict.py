@@ -21,16 +21,7 @@ def my_IoU(y_true, y_pred):
     intersection = K.sum(y_true * y_pred)
     IoU = (intersection+0.0000001) / (K.sum(y_true) + K.sum(y_pred) - intersection + 0.001)
     return IoU
-#model = load_model('seg_model.h5', custom_objects={'my_IoU': my_IoU})
-#model = load_model('new_dlv3+_hand_segment_v2.hdf5', custom_objects={'my_IoU': my_IoU})
-def my_IoU(y_true, y_pred):
-    y_pred = K.argmax(y_pred)
-    y_pred = K.cast(y_pred, 'float32')
-    y_pred = K.flatten(y_pred)
-    y_true = K.flatten(y_true)
-    intersection = K.sum(y_true * y_pred)
-    IoU = (intersection+0.0000001) / (K.sum(y_true) + K.sum(y_pred) - intersection + 0.001)
-    return IoU
+
 def segment(model_segment,image_path):
     img_input = cv2.imread(image_path)
     img_input.astype('float32')
