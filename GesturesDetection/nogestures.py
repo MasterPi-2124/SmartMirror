@@ -59,7 +59,7 @@ def segment(model_segment,img_input, x):
                                                                                                       0.1 * (x2_final - x1_final)))]
     result = cv2.resize(result, (256, 256))
 
-    cv2.imwrite('segment/segment_{}.png'.format(x), result)
+    cv2.imwrite('segment/nogestures/segment_{}.png'.format(x), result)
 
 
 if __name__ == "__main__":
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     while x <= 500:
             vid = cv2.VideoCapture(0)
             ret, frame = vid.read()
-            cv2.imwrite('raw/savedImage_{}.png'.format(x), frame)
+            cv2.imwrite('raw/nogestures/savedImage_{}.png'.format(x), frame)
             vid.release()
             segment(model_segment, frame, x)
             x = x + 1
